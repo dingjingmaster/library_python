@@ -25,12 +25,12 @@ def spark_get_data(sc, path):
 # spark map 解析hadoop字段 (gid \t key \t value ...)
 def spark_parse_item(rdd, keyList):
 
-	x = x.strip("\n")
-	data = x.split("\t")
+	rdd = rdd.strip("\n")
+	data = rdd.split("\t")
 	gid = arr[0]
 	value = []
 
-	if listNum == 0:
+	if 0 == len(keyList):
 		return ""
 
 	for key in keyList:
