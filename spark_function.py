@@ -27,7 +27,7 @@ def spark_parse_item(rdd, keyList):
 
 	rdd = rdd.strip("\n")
 	data = rdd.split("\t")
-	gid = arr[0]
+	gid = data[0]
 	value = []
 
 	if 0 == len(keyList):
